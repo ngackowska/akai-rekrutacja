@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url("background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 5px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: .2em;
+  background-image: linear-gradient(#fdacac, #ff0000);
+  -webkit-background-clip: text;
+  background-clip: text;
+   -webkit-text-fill-color: transparent;
+   filter: drop-shadow(2px 2px #333);
+}
+
+main {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  padding: 8px;
+}
+
+label span {
+  display: inline-block;
+  padding-left: 8px;
+}
+
+input {
+  padding: 4px;
+}
+
+button {
+  width: 100px;
+  padding: 4px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 4px  4px 5px rgba(0, 0, 0, 0.301);
+  background-image: linear-gradient(#fdacac, #ff0000);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  text-shadow: 2px 2px 2px black;
+  cursor: pointer;
+}
+
+button:hover {
+  margin-top: 12px;
+  margin-bottom: 28px;
+}
+
+button:active {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.filters {
+  margin: 20px;
+  margin-top: 40px;
+  background-image: linear-gradient(#d0f0f5, #48c0d3);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px;
+  height: fit-content;
+}
+
+#form-filters {
+  display: flex;
+  flex-direction: column;
+}
+
+#form-filters div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input[type=checkbox] {
+  position: relative;
+}
+
+input[type=checkbox]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid #555555;
+  border-radius: 3px;
+  background-color: white;
+}
+
+input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+
+#pokemon-name {
+  margin: 10px;
+  margin-top: 20px;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.pokemons {
+  margin-top: 40px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 800px;
+}
+
+.pokemon {
+  display: flex;
+  width: 600px;
+  padding: 10px;
+  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-image: linear-gradient(#d0f0f5, #48c0d3);
+  border-radius: 20px;
+  box-shadow: 3px 3px 15px;
+}
+
+.pokemon:hover {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+img {
+  height: 150px;
+  float: left;
+  margin-left: 50px;
+}
+
+.div-name-type {
+  width: 300px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  float: right;
+  margin: 30px;
+  align-items: center;
+}
+
+.div-pokemon-name {
+  cursor: default;
+  font-size: 2em;
+  letter-spacing: .05em;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.div-pokemon-type {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  height: 50px;
+}
+
+.pokemon-type {
+  cursor: default;
+  height: 25px;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 7px;
+  color: black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.555);
+  font-weight: 20;
+  font-size: 1.1em;
+  letter-spacing: .1em;
+  text-shadow: 0.07em 0.07em 0.05em white;
+}
+
+.pokemon-type:hover {
+  margin-top: 15px;
+  cursor: default;
+}
+
+#form-filters label span {
+  margin-left: 20px;
+  padding: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.555);
+  font-family: 'Arial Narrow Bold', sans-serif;
+  letter-spacing: .1em;
+}
+
+#form-filters label span:hover {
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.grass, #form-filters label:nth-child(1) span {
+  background-image: linear-gradient(rgba(0, 255, 13, 0.363), rgba(0, 109, 5, 0.603));
+}
+
+.poison, #form-filters label:nth-child(2) span  {
+  background-image: linear-gradient(rgba(251, 255, 0, 0.363), rgba(0, 255, 13, 0.603));
+}
+
+.fire, #form-filters label:nth-child(3) span  {
+  background-image: linear-gradient(rgba(255, 219, 56, 0.363), rgba(255, 0, 0, 0.603));
+}
+
+.flying, #form-filters label:nth-child(4) span  {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.363), rgba(255, 0, 0, 0.603));
+}
+
+.bug, #form-filters label:nth-child(5) span  {
+  background-image: linear-gradient(rgba(0, 170, 0, 0.363), rgba(95, 0, 0, 0.603));
+}
+
+.water, #form-filters label:nth-child(6) span  {
+  background-image: linear-gradient(rgba(40, 98, 255, 0.363), rgba(0, 43, 161, 0.603));
+}
+
+.normal, #form-filters label:nth-child(7) span  {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.363), rgba(82, 82, 82, 0.603));
+}
+
+.ground, #form-filters label:nth-child(8) span  {
+  background-image: linear-gradient(rgba(219, 35, 35, 0.363), rgba(43, 8, 8, 0.603));
+}
+
+.electric, #form-filters label:nth-child(9) span  {
+  background-image: linear-gradient(rgba(255, 251, 0, 0.363),rgba(255, 136, 0, 0.603));
+}
+
+.fairy, #form-filters label:nth-child(10) span  {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.363),rgba(255, 0, 157, 0.603));
+}
+
+.fighting, #form-filters label:nth-child(11) span  {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.363),rgba(255, 136, 0, 0.603));
+}
+
+.psychic, #form-filters label:nth-child(12) span  {
+  background-image: linear-gradient(rgba(255, 0, 242, 0.363),rgba(255, 217, 0, 0.603));
+}
+
+.rock, #form-filters label:nth-child(13) span  {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.363),rgba(189, 189, 189, 0.603));
+}
+
+.steal, #form-filters label:nth-child(14) span  {
+  background-image: linear-gradient(rgba(0, 60, 255, 0.363),rgba(87, 87, 87, 0.603));
+}
+
+.ice, #form-filters label:nth-child(15) span  {
+  background-image: linear-gradient(rgba(159, 233, 255, 0.363),rgba(0, 120, 218, 0.603));
+}
+
+.ghost, #form-filters label:nth-child(16) span  {
+  background-image: linear-gradient(rgba(0, 162, 255, 0.363),rgba(255, 0, 0, 0.603));
+}
+
+.dragon, #form-filters label:nth-child(17) span  {
+  background-image: linear-gradient(rgba(255, 0, 212, 0.363),rgba(183, 0, 255, 0.603));
+}
+
